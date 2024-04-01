@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryApps.Views.MainMenu"
+             Title="MainMenu"
+             BackgroundColor="#F3F3F3"
+             Shell.NavBarIsVisible="False">
+    <Grid Grid.Row="0" Margin="25,25,0,0" RowDefinitions=".1*,.2*,.3*">
+        <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label 
+                    x:Name="user" 
+                    HorizontalOptions="Start"
+                    Text="Selamat Pagi"
+                    FontSize="14"/>
+                <Label
+                    FontFamily="AvenirLTStd-Black"
+                    Text="Alver"
+                    FontSize="18"
+                 />
+            </VerticalStackLayout>
+            <Border
+                Grid.Column="1"
+                HeightRequest="75"
+                HorizontalOptions="End"
+                StrokeShape="RoundRectangle 80,80,80,80"
+                WidthRequest="75">
+                <Image 
+                    Aspect="AspectFill"
+                    HeightRequest="180"
+                    HorizontalOptions="Center"
+                    Source="profile.png"
+                    WidthRequest="100"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,10,25,0" ColumnDefinitions="*,*">
+            <VerticalStackLayout>
+                <Label 
+                    Text="Promo"
+                    FontSize="18"
+                    FontFamily="AvenirBlack"/>
+            </VerticalStackLayout>
+            <Label 
+                HorizontalOptions="End"
+                Grid.Column="1"
+                Text="Lihat Semua"
+                FontSize="18"
+                TextColor="#F691CD"
+                FontFamily="AvenirBlack"/>
+        </Grid>
+        <!--Card View Promo-->
+        <Grid Grid.Row="1" Margin="0,10,25,0">
+            <CollectionView ItemsSource="{Binding Promos}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="25" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="120" WidthRequest="250">
+                            <Border
+                                HeightRequest="150"
+                                HorizontalOptions="Center"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                WidthRequest="250">
+
+                                <Image Aspect="AspectFill" Source="{Binding Image}"/>
+                            </Border>
+                            <VerticalStackLayout>
+                                <Label FontSize="12" Margin="25,10" Text="{Binding Deskripsi}"/>
+                                <Button FontFamily="AvenirBlack" FontSize="14" Margin="25,0,80,25" TextColor="#F691CD" Text="{Binding Nama}" BackgroundColor="White"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+        <Label Grid.Row="2" Text="Layanan Kami" FontSize="18" FontFamily="AvenirBlack"/>
+
+        <!--Card View Layanan Kami-->
+        <ScrollView Grid.Row="2" Margin="0,40" >
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Grid Margin="0,5" HeightRequest="155" WidthRequest="155">
+                        <Border
+                          BackgroundColor="White"
+                          StrokeShape="RoundRectangle 20,20,20,20"
+                          StrokeThickness="0"
+                          HeightRequest="155"
+                          WidthRequest="155">
+                            <Image
+                            Margin="20,20"
+                            WidthRequest="42"
+                            HeightRequest="46"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Source="mesincuci.svg"/>
+                        </Border>
+                        <StackLayout  Margin="20,70">
+                            <Label Text="Cuci aja" FontSize="16" FontFamily="AvenirBlack"  />
+                            <Label Text="Cuci bersih wangi, tapi ga disetrika" FontSize="14" FontFamily="AvenirBook"  />
+                        </StackLayout>
+                    </Grid>
+                    <Grid Margin="35,0"  HeightRequest="155" WidthRequest="155">
+                        <Border
+                         BackgroundColor="White"
+                         StrokeShape="RoundRectangle 20,20,20,20"
+                         
+                         StrokeThickness="0"
+                         HeightRequest="155"
+                         WidthRequest="155">
+                            <Image
+                           Margin="20,20"
+                           WidthRequest="42"
+                           HeightRequest="46"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Source="setrika.svg"/>
+                        </Border>
+                        <StackLayout  Margin="20,70">
+                            <Label Text="Cuci Setrika" FontSize="16" FontFamily="AvenirBlack"  />
+                            <Label Text="Cuci bersih wangi, dan disetrika" FontSize="14" FontFamily="AvenirBook"  />
+                        </StackLayout>
+                    </Grid>
+                </HorizontalStackLayout>
+
+                <!--Row 2-->
+                <HorizontalStackLayout>
+                    <Grid Margin="0,5" HeightRequest="155" WidthRequest="155">
+                        <Border
+                           BackgroundColor="White"
+                           StrokeShape="RoundRectangle 20,20,20,20"
+                           StrokeThickness="0"
+                           HeightRequest="155"
+                           WidthRequest="155">
+                            <Image
+                             Margin="20,20"
+                             WidthRequest="42"
+                             HeightRequest="46"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Start"
+                             Source="karpet.svg"/>
+                        </Border>
+                        <StackLayout  Margin="20,70">
+                            <Label Text="Karpet" FontSize="16" FontFamily="AvenirBlack"  />
+                            <Label Text="Biar nyaman lesehan santai-santai" FontSize="14" FontFamily="AvenirBook"  />
+                        </StackLayout>
+                    </Grid>
+                    <Grid Margin="35,0"  HeightRequest="155" WidthRequest="155">
+                        <Border
+                          BackgroundColor="White"
+                          StrokeShape="RoundRectangle 20,20,20,20"
+                         
+                          StrokeThickness="0"
+                          HeightRequest="155"
+                          WidthRequest="155">
+                            <Image
+                            Margin="20,20"
+                            WidthRequest="42"
+                            HeightRequest="46"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Source="kasur.svg"/>
+                        </Border>
+                        <StackLayout  Margin="20,70">
+                            <Label Text="Kasur" FontSize="16" FontFamily="AvenirBlack"  />
+                            <Label Text="Tidur jadi nyaman, bebas gatel dan bau" FontSize="14" FontFamily="AvenirBook"  />
+                        </StackLayout>
+                    </Grid>
+                </HorizontalStackLayout>
+                <!--Row 3-->
+                <HorizontalStackLayout>
+                    <Grid Margin="0,5" HeightRequest="155" WidthRequest="155">
+                        <Border
+                        BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20,20,20,20"
+                        StrokeThickness="0"
+                        HeightRequest="155"
+                        WidthRequest="155">
+                            <Image
+                              Margin="20,20"
+                              WidthRequest="42"
+                              HeightRequest="46"
+                              HorizontalOptions="Start"
+                              VerticalOptions="Start"
+                              Source="sepatu.svg"/>
+                        </Border>
+                        <StackLayout  Margin="20,70">
+                            <Label Text="Sepatu &amp; Tas" FontSize="16" FontFamily="AvenirBlack"  />
+                            <Label Text="Biar tambah kece dan bersih" FontSize="14" FontFamily="AvenirBook"  />
+                        </StackLayout>
+                    </Grid>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+        <!--Bottom Navigation Bar-->
+        
+    </Grid>
+</ContentPage>

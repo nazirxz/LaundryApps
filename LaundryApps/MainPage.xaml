@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryApps.MainPage">
+    <StackLayout>
+        <Image
+        Source="logo.png"
+        WidthRequest="200"   
+        />
+        <Label
+        Text="Masuk Akun"
+        FontFamily="OpenSans-Semibold"
+        FontSize="30"
+        Margin="25,30"
+        />
+        <Border Stroke="Black" Margin="25,0" StrokeThickness="0.6" >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5" />
+            </Border.StrokeShape>
+            <Entry x:Name="email" Placeholder="Email" />
+        </Border>
+        <Border Stroke="Black" Margin="25,10" StrokeThickness="0.6">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5" />
+            </Border.StrokeShape>
+            <Entry x:Name="password" Placeholder="Password" IsPassword="True" />
+        </Border>
+        <Button x:Name="btnMasuk" Clicked="btnClicked" Text="Masuk" FontFamily="OpenSans-Regular" Margin="25,5" BackgroundColor="#0457A6"/>
+        <Label Text="Belum mempunyai akun ?" TextColor="Gray" HorizontalOptions="Center"/>
+        <Label x:Name="daftar" Text="daftar disini" TextColor="#0457A6" HorizontalOptions="Center" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLabelTapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
+</ContentPage>
