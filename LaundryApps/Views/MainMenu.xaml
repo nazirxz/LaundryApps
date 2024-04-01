@@ -5,6 +5,7 @@
              Title="MainMenu"
              BackgroundColor="#F3F3F3"
              Shell.NavBarIsVisible="False">
+    
     <Grid Grid.Row="0" Margin="25,25,0,0" RowDefinitions=".1*,.2*,.3*">
         <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
             <VerticalStackLayout  VerticalOptions="Center">
@@ -193,6 +194,51 @@
             </VerticalStackLayout>
         </ScrollView>
         <!--Bottom Navigation Bar-->
-        
+        <Border
+                Padding="16,0"
+                BackgroundColor="#0457A6"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Margin="0,0,0,20"
+                HeightRequest="60"
+                WidthRequest="240"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="45"/>
+            </Border.StrokeShape>
+
+            <Grid
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    RowDefinitions="Auto,Auto"
+                    ColumnDefinitions="*,*,*"
+                    RowSpacing="6">
+
+                <Image
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        Source="home.svg"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center" />
+                <Image
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        Source="ticket.svg"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center" />
+                <Image
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        Source="history.svg"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Center" />
+
+            </Grid>
+        </Border>
     </Grid>
 </ContentPage>
