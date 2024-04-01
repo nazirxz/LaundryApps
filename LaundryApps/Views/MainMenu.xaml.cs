@@ -22,4 +22,20 @@ public partial class MainMenu : ContentPage
 		};
 
     }
+	private void HomeTapped(object sender, EventArgs e) 
+	{
+		Navigation.PushAsync(new MainMenu());
+	}
+	private void HistoryTapped(object sender, EventArgs e)
+	{
+		
+	}
+	private void TicketTapped(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new Ticket());
+	}
+	private void LihatSemuaTapped(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new Ticket());
+	}
 }
