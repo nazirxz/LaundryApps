@@ -15,4 +15,8 @@ public partial class Order : ContentPage
 
         }
     }
+    private void btnOrder(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new OrderConfirmed());
+    }
 }

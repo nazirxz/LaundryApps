@@ -12,14 +12,14 @@ namespace LaundryApps
         {
             Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
             {
-                if (view is Entry)
+                if (view is Entry || view is Picker)
                 {
                     // Remove underline
                     handler.PlatformView.BackgroundTintList = ColorStateList.ValueOf(Android.Graphics.Color.Transparent);
 
                     // Change placeholder text color
                     handler.PlatformView.SetHintTextColor(ColorStateList.ValueOf(Android.Graphics.Color.Gray));
-                }
+                } 
             });
         }
 

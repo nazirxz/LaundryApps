@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LaundryApps.Views.Order"
+             xmlns:Shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
              Title="Order"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#F3F3F3">
@@ -44,7 +45,7 @@
 
         <HorizontalStackLayout>
             <Border 
-                Margin="25,0"
+                Margin="25,0,15,0"
                 Background="White"
                 WidthRequest="65"
                 HeightRequest="61"
@@ -52,11 +53,133 @@
                 StrokeShape="RoundRectangle 10,10,10,10">
                 <VerticalStackLayout>
                     <Label x:Name="month" Text="Mar" HorizontalOptions="Center" />
-                    <Label x:Name="day" Text="25" HorizontalOptions="Center"/>
-                    <Label x:Name="day2" Text="Senin" HorizontalOptions="Center"/>
+                    <Label x:Name="date" Text="25" HorizontalOptions="Center"/>
+                    <Label x:Name="day" Text="Senin" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
             </Border>
-     
+            <Border 
+                Margin="15,0"
+                Background="White"
+                WidthRequest="65"
+                HeightRequest="61"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <VerticalStackLayout>
+                    <Label x:Name="month2" Text="Mar" HorizontalOptions="Center" />
+                    <Label x:Name="date2" Text="26" HorizontalOptions="Center"/>
+                    <Label x:Name="day2" Text="Selasa" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+            <Border 
+                Margin="15,0"
+                Background="White"
+                WidthRequest="65"
+                HeightRequest="61"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <VerticalStackLayout>
+                    <Label x:Name="month3" Text="Mar" HorizontalOptions="Center" />
+                    <Label x:Name="date3" Text="27" HorizontalOptions="Center"/>
+                    <Label x:Name="day3" Text="Rabu" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+            <Border 
+                Margin="15,0"
+                Background="White"
+                WidthRequest="65"
+                HeightRequest="61"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <VerticalStackLayout>
+                    <Label x:Name="month4" Text="Mar" HorizontalOptions="Center" />
+                    <Label x:Name="date4" Text="28" HorizontalOptions="Center"/>
+                    <Label x:Name="day4" Text="Kamis" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
         </HorizontalStackLayout>
+        
+        <!--Jam Jemput-->
+        <Label Text="Pilih jam penjemputan" Margin="25,25" FontSize="16" FontFamily="AvenirBlack"/>
+        <HorizontalStackLayout>
+            <Border
+             Margin="25,0,10,0"
+             Background="White"
+             WidthRequest="70"
+             HeightRequest="27"
+             StrokeThickness="0"
+             StrokeShape="RoundRectangle 10,10,10,10">
+                <Label Text="10:00" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Border>
+            <Border
+             Margin="10,0"
+             Background="White"
+             WidthRequest="70"
+             HeightRequest="27"
+             StrokeThickness="0"
+             StrokeShape="RoundRectangle 10,10,10,10">
+                <Label Text="10:00" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Border>
+            <Border
+             Margin="10,0"
+             Background="White"
+             WidthRequest="70"
+             HeightRequest="27"
+             StrokeThickness="0"
+             StrokeShape="RoundRectangle 10,10,10,10">
+                <Label Text="10:00" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Border>
+            <Border
+             Margin="10,0"
+             Background="White"
+             WidthRequest="70"
+             HeightRequest="27"
+             StrokeThickness="0"
+             StrokeShape="RoundRectangle 10,10,10,10">
+                <Label Text="10:00" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Border>
+        </HorizontalStackLayout>
+        <Label FontSize="16" FontFamily="AvenirBlack" Text="Jenis Paket" Margin="25,25"/>
+        <Border 
+            StrokeShape="RoundRectangle 20,20,20"
+            WidthRequest="350"
+            HeightRequest="42"
+            StrokeThickness="1"
+            >
+            <Picker x:Name="picker"  Title="Pilih jenis paket" WidthRequest="350" HeightRequest="42">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Regular</x:String>
+                        <x:String>Express</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Border>
+        
+        <Label FontSize="16" FontFamily="AvenirBlack" Text="Layanan" Margin="25,25" />
+        <Border 
+              StrokeShape="RoundRectangle 20,20,20"
+              WidthRequest="350"
+              HeightRequest="42"
+              StrokeThickness="1"
+              >
+            <Picker x:Name="pickerlayanan" Title="Pilih jenis layanan" WidthRequest="350" HeightRequest="42">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cuci Setrika</x:String>
+                        <x:String>Cuci aja</x:String>
+                        <x:String>Kasur</x:String>
+                        <x:String>Sepatu &amp; Tas</x:String>
+                        <x:String>Karpet</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Border>
+        <Button 
+                Clicked="btnOrder"
+                Margin="0,80"
+                WidthRequest="324" HeightRequest="49" 
+                VerticalOptions="End" Text="Proses" 
+                FontFamily="AvenirBlack" FontSize="16"
+                BackgroundColor="#F691CD" TextColor="Black"/>
     </VerticalStackLayout>
 </ContentPage>
