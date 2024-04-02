@@ -59,6 +59,8 @@
 	  <None Remove="Resources\Fonts\AvenirBlack.otf" />
 	  <None Remove="Resources\Fonts\AvenirBook.otf" />
 	  <None Remove="Resources\Fonts\AvenirRoman.otf" />
+	  <None Remove="Resources\Images\back.svg" />
+	  <None Remove="Resources\Images\backicon.svg" />
 	  <None Remove="Resources\Images\history.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\Karpet.svg" />
@@ -85,6 +87,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\MainMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Order.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Register.xaml">

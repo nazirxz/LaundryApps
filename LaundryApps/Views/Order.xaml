@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryApps.Views.Order"
+             Title="Order"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F3F3F3">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <ImageButton Clicked="btnBack" HeightRequest="80"  WidthRequest="80" Margin="0,20" VerticalOptions="Center" Source="backicon.svg" />
+            <Label Text="Waktu Jemput" FontSize="18" VerticalTextAlignment="Center" FontFamily="AvenirBlack" Margin="0,0,10,0" />
+        </HorizontalStackLayout>
+        <!--Cardview 1-->
+        <Grid WidthRequest="324" HeightRequest="80">
+            <Border
+            WidthRequest="350"
+            HeightRequest="100"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 30,30,30,30"
+            VerticalOptions="Center"                
+            BackgroundColor="White"
+            >
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Alamat Penjemputan" Margin="10,15" FontSize="18" FontFamily="AvenirBook"/>
+                        <Border 
+                            Margin="40,0"
+                            WidthRequest="86" HeightRequest="31" 
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 30,30,30,30"
+                            Stroke="#F691CD">
+                            <Border.GestureRecognizers>
+                                <!-- <TapGestureRecognizer Tapped="GantiAlamat"/>-->
+                            </Border.GestureRecognizers>
+                            <Label Text="Ganti Alamat" FontSize="12" FontFamily="AvenirBook" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <Label Text="Jl.Umban Sari" Margin="10,0" FontSize="20" FontFamily="AvenirBlack"/>
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+        <!--Hari Jemput-->
+        <Label Margin="25,25" Text="Pilih hari penjemputan" FontSize="16" FontFamily="AvenirBlack"/>
+
+        <HorizontalStackLayout>
+            <Border 
+                Margin="25,0"
+                Background="White"
+                WidthRequest="65"
+                HeightRequest="61"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <VerticalStackLayout>
+                    <Label x:Name="month" Text="Mar" HorizontalOptions="Center" />
+                    <Label x:Name="day" Text="25" HorizontalOptions="Center"/>
+                    <Label x:Name="day2" Text="Senin" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+     
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

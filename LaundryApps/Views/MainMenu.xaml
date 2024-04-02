@@ -92,6 +92,9 @@
                           StrokeThickness="0"
                           HeightRequest="155"
                           WidthRequest="155">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LayananTapped"/>
+                            </Border.GestureRecognizers>
                             <Image
                             Margin="20,20"
                             WidthRequest="42"
@@ -113,6 +116,9 @@
                          StrokeThickness="0"
                          HeightRequest="155"
                          WidthRequest="155">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LayananTapped"/>
+                            </Border.GestureRecognizers>
                             <Image
                            Margin="20,20"
                            WidthRequest="42"
@@ -137,6 +143,9 @@
                            StrokeThickness="0"
                            HeightRequest="155"
                            WidthRequest="155">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LayananTapped"/>
+                            </Border.GestureRecognizers>
                             <Image
                              Margin="20,20"
                              WidthRequest="42"
@@ -154,10 +163,12 @@
                         <Border
                           BackgroundColor="White"
                           StrokeShape="RoundRectangle 20,20,20,20"
-                         
                           StrokeThickness="0"
                           HeightRequest="155"
                           WidthRequest="155">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LayananTapped"/>
+                            </Border.GestureRecognizers>
                             <Image
                             Margin="20,20"
                             WidthRequest="42"
@@ -181,6 +192,9 @@
                         StrokeThickness="0"
                         HeightRequest="155"
                         WidthRequest="155">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LayananTapped"/>
+                            </Border.GestureRecognizers>
                             <Image
                               Margin="20,20"
                               WidthRequest="42"

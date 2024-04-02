@@ -38,4 +38,8 @@ public partial class MainMenu : ContentPage
 	{
 		Navigation.PushAsync(new Ticket());
 	}
+	private void LayananTapped(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new Order());
+	}
 }

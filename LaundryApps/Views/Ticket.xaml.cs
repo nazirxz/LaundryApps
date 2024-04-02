@@ -20,4 +20,13 @@ public partial class Ticket : ContentPage
             new Promo{ Nama= "SHOE21",Deskripsi="Bikin Sepatu kinclong! Pakai kode ini :", Image="promo2.png"}
         };
     }
+    private void btnBack(object sender, EventArgs e)
+    {
+        // Lakukan navigasi kembali ke halaman sebelumnya di sini
+        if (Navigation != null)
+        {
+            Navigation.PopAsync(); // Jika Anda menggunakan NavigationPage
+
+        }
+    }
 }
