@@ -2,11 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LaundryApps.Views.OrderConfirmed"
-             Title="OrderConfirmed">
-    <VerticalStackLayout>
+             Title="OrderConfirmed"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Background}">
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Image 
+          VerticalOptions="Center"
+          Source="delivery.svg"
+          WidthRequest="300"
+          HeightRequest="300"
+        />
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Order telah"
+            FontFamily="AvenirBlack"
+            FontSize="20"
+            HorizontalOptions="Center"
+            />
+        <Label 
+             Text="dikonfirmasi !"
+             FontFamily="AvenirBlack"
+             FontSize="20"
+             HorizontalOptions="Center"
+             />
+        <Label 
+            Text="Jangan khawatir dengan pakaian anda, pakaian anda akan dibersihkan dengan secepat kilat"
+            FontFamily="AvenirBook"
+            FontSize="14"
+            WidthRequest="261"
+            HeightRequest="52"
+            Margin="0,15"
+            HorizontalTextAlignment="Center"/>
+        <Button
+            Text="Home"
+            WidthRequest="325"
+            HeightRequest="50"
+            BackgroundColor="{StaticResource Blue}"
+            Clicked="btnHome"
+            />
     </VerticalStackLayout>
 </ContentPage>

@@ -6,4 +6,8 @@ public partial class OrderConfirmed : ContentPage
 	{
 		InitializeComponent();
 	}
+	private void btnHome(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new MainMenu());
+    }
 }

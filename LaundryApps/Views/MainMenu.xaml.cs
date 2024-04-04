@@ -11,6 +11,7 @@ public partial class MainMenu : ContentPage
 		InitializeComponent();
 		InitializePromos();
 		BindingContext = this;
+	
 	}
 
 	private void InitializePromos()
@@ -42,4 +43,5 @@ public partial class MainMenu : ContentPage
 	{
 		Navigation.PushAsync(new Order());
 	}
+
 }
