@@ -34,7 +34,7 @@
             </Border.StrokeShape>
             <Entry x:Name="password" Placeholder="Password" IsPassword="True" />
         </Border>
-        <Button x:Name="btnDaftar" Text="Daftar" FontFamily="OpenSans-Regular" Margin="25,5" BackgroundColor="#0457A6"/>
+        <Button x:Name="btnDaftar" Clicked="RegisterButton_Clicked" Text="Daftar" FontFamily="OpenSans-Regular" Margin="25,5" BackgroundColor="#0457A6"/>
         <Label Text="Sudah mempunyai akun ?" TextColor="Gray" HorizontalOptions="Center"/>
         <Label x:Name="masuk" Text="Masuk disini" TextColor="#0457A6" HorizontalOptions="Center" >
             <Label.GestureRecognizers>
