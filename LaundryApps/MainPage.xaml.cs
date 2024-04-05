@@ -29,7 +29,7 @@ namespace LaundryApps
             {
                 // Jika email dan password cocok, login berhasil
                 await DisplayAlert("Login", "Login berhasil!", "OK");
-                Navigation.PushAsync(new Views.MainMenu());
+                Navigation.PushAsync(new Views.MainMenu(user));
             }
             else
             {
@@ -66,6 +66,7 @@ namespace LaundryApps
     // Kelas model untuk merepresentasikan data pengguna
     public class User
     {
+        public string Fullname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         // Anda dapat menambahkan properti lain sesuai kebutuhan (misalnya: Nama Pengguna, dll.)

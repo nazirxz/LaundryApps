@@ -5,7 +5,7 @@
              Title="MainMenu"
              BackgroundColor="#F3F3F3"
              Shell.NavBarIsVisible="False">
-    
+
     <Grid Grid.Row="0" Margin="25,25,0,0" RowDefinitions=".1*,.2*,.3*">
         <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
             <VerticalStackLayout  VerticalOptions="Center">
@@ -15,8 +15,9 @@
                     Text="Selamat Pagi"
                     FontSize="14"/>
                 <Label
+                    x:Name="nameUser"
                     FontFamily="AvenirLTStd-Black"
-                    Text="Alver"
+                    Text="{Binding User.Fullname}"
                     FontSize="18"
                  />
             </VerticalStackLayout>
