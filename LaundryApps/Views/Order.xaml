@@ -27,7 +27,7 @@
                         <Label Text="Alamat Penjemputan" Margin="10,15" FontSize="18" FontFamily="AvenirBook"/>
 
                     </HorizontalStackLayout>
-                    <Entry Placeholder="Masukkan alamat" Margin="10,0" FontSize="20" FontFamily="AvenirBlack"/>
+                    <Entry x:Name="alamatEntry" Placeholder="Masukkan alamat" Margin="10,0" FontSize="20" FontFamily="AvenirBlack"/>
                 </VerticalStackLayout>
             </Border>
         </Grid>
@@ -111,7 +111,7 @@
         <Label Text="Pilih jam penjemputan" Margin="25,25" FontSize="16" FontFamily="AvenirBlack"/>
         <HorizontalStackLayout>
             <Border
-            x:Name="jam10"
+             x:Name="jam10"
              Margin="25,0,10,0"
              Background="{Binding SelectedBorderColor}"
              WidthRequest="70"

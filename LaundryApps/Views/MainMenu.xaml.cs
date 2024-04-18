@@ -1,6 +1,5 @@
 using LaundryApps.Models;
 using System.Collections.ObjectModel;
-
 namespace LaundryApps.Views;
 
 public partial class MainMenu : ContentPage
@@ -43,7 +42,7 @@ public partial class MainMenu : ContentPage
 
     private void HistoryTapped(object sender, EventArgs e)
     {
-        // Tambahkan logika untuk navigasi ke halaman History
+        Navigation.PushAsync(new HistoryCucian(User));
     }
 
     private void TicketTapped(object sender, EventArgs e)
@@ -58,6 +57,6 @@ public partial class MainMenu : ContentPage
 
     private void LayananTapped(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Order());
+        Navigation.PushAsync(new Order(User));
     }
 }

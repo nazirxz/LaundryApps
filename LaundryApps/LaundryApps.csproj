@@ -90,6 +90,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="Views\HistoryCucian.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

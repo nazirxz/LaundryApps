@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using LaundryApps.Models;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace LaundryApps.ViewModel
@@ -6,9 +7,10 @@ namespace LaundryApps.ViewModel
 
     namespace LaundryApps.ViewModel
     {
-        public class DateViewModel : INotifyPropertyChanged
+        public class OrderViewModel : INotifyPropertyChanged
         {
             private Color _borderColor;
+            public User User { get; set; }
             public string Day { get; set; }
             public string Month { get; set; }
             public string Date { get; set; }
@@ -28,7 +30,7 @@ namespace LaundryApps.ViewModel
             public string NextDay3 { get; set; }
             public string NextDate3 { get; set; }
 
-            public DateViewModel()
+            public OrderViewModel()
             {
                 // Mendapatkan tanggal saat ini
                 var currentDate = DateTime.Now;

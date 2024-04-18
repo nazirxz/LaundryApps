@@ -1,5 +1,6 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
+using LaundryApps.Models;
 
 namespace LaundryApps
 {
@@ -61,14 +62,5 @@ namespace LaundryApps
                 return null; // Mengembalikan null jika terjadi kesalahan
             }
         }
-    }
-
-    // Kelas model untuk merepresentasikan data pengguna
-    public class User
-    {
-        public string Fullname { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        // Anda dapat menambahkan properti lain sesuai kebutuhan (misalnya: Nama Pengguna, dll.)
     }
 }

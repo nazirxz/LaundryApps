@@ -13,7 +13,7 @@
         </HorizontalStackLayout>
         <Grid Grid.Row="1" Margin="25,10,25,0">
 
-            
+
             <CollectionView ItemsSource="{Binding Promos}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="25" Orientation="Vertical"/>

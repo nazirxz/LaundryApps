@@ -1,11 +1,12 @@
 using Firebase.Database;
 using Firebase.Database.Query;
+using LaundryApps.Models;
 
 namespace LaundryApps.Views;
 
 public partial class Register : ContentPage
 {
-
+    public User User { get; set; }
     public Register()
     {
         InitializeComponent();
@@ -36,8 +37,11 @@ public partial class Register : ContentPage
                 Email = alamatEmail,
                 Password = kataSandi
             });
+            // Create a new User object
+            User = new User(namaLengkap, alamatEmail, kataSandi);
             await DisplayAlert("Registrasi Berhasil", "Akun Anda telah berhasil didaftarkan.", "OK");
-            Navigation.PushAsync(new MainMenu());
+            await Navigation.PushAsync(new MainMenu(User));
+
         }
         catch (Exception ex)
         {
